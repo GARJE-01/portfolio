@@ -83,5 +83,24 @@ export const portfolioData = {
     email: "mayurgarje8830@gmail.com",
     github: "https://github.com/GARJE-01",
     linkedin: "https://www.linkedin.com/in/mayurgarjeofficial/"
+  },
+  profiles: {
+    professional: [
+      { name: "GitHub", url: "https://github.com/GARJE-01", icon: "FaGithub" },
+      { name: "LinkedIn", url: "https://www.linkedin.com/in/mayurgarjeofficial/", icon: "FaLinkedin" },
+      { name: "Naukri", url: "https://www.naukri.com/code360/profile/MaYurG", icon: "FaBriefcase" }
+    ],
+    coding: [
+      { name: "LeetCode", url: "https://leetcode.com/u/m_a_y_u_r_g/", icon: "SiLeetcode" },
+      { name: "GeeksforGeeks", url: "https://www.geeksforgeeks.org/profile/mayurgarkqya", icon: "SiGeeksforgeeks" },
+      { name: "HackerRank", url: "https://www.hackerrank.com/profile/mayurgarje8830", icon: "SiHackerrank" },
+      { name: "Code360", url: "https://www.naukri.com/code360/profile/MaYurG", icon: "SiCodingninjas" }
+    ],
+    social: [
+      { name: "Instagram", url: "https://www.instagram.com/themayurgarje/", icon: "FaInstagram" },
+      { name: "X", url: "https://x.com/themayurgarje", icon: "FaXTwitter" },
+      { name: "Pinterest", url: "https://in.pinterest.com/", icon: "FaPinterest" },
+      { name: "Telegram", url: "https://t.me/M_A_Y_U_R_G", icon: "FaTelegram" }
+    ]
   }
 };
