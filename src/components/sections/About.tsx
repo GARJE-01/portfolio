@@ -62,8 +62,9 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="glass-card p-8 rounded-2xl flex flex-col items-center text-center hover:-translate-y-2"
+              transition={{ duration: 0.8, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
+              whileHover={{ y: -12, scale: 1.02 }}
+              className="glass-card p-8 rounded-2xl flex flex-col items-center text-center hover:shadow-[0_20px_50px_-10px_rgba(139,92,246,0.15)]"
             >
               {card.icon}
               <h3 className="text-xl font-semibold mb-3">{card.title}</h3>

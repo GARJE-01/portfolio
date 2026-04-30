@@ -20,13 +20,13 @@ export default function Projects() {
             return (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ y: -10 }}
+                transition={{ duration: 0.8, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                whileHover={{ y: -12, scale: 1.01 }}
                 className={cn(
-                  "glass-card rounded-2xl overflow-hidden group hover:shadow-[0_0_30px_-5px_rgba(59,130,246,0.3)] hover:border-neon-blue/30 transition-all duration-500",
+                  "glass-card rounded-2xl overflow-hidden group hover:shadow-[0_20px_50px_-10px_rgba(59,130,246,0.2)] hover:border-neon-blue/30 transition-all duration-700",
                   isFeatured ? "md:col-span-2 lg:col-span-2 flex flex-col md:flex-row" : "flex flex-col"
                 )}
               >
