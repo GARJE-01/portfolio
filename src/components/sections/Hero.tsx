@@ -39,7 +39,7 @@ export default function Hero() {
   return (
     <section id="hero" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Content */}
-      <div className="container mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="container mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-16 lg:gap-24 items-center relative z-10">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}

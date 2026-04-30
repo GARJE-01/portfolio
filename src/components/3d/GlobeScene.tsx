@@ -10,12 +10,12 @@ function Globe() {
 
   useFrame((_, delta) => {
     if (mesh.current && outerMesh.current) {
-      // Slow rotation for the globe
-      mesh.current.rotation.y += delta * 0.1;
-      mesh.current.rotation.x += delta * 0.05;
+      // Slower, smoother rotation
+      mesh.current.rotation.y += delta * 0.04;
+      mesh.current.rotation.x += delta * 0.02;
       
-      outerMesh.current.rotation.y -= delta * 0.05;
-      outerMesh.current.rotation.x -= delta * 0.02;
+      outerMesh.current.rotation.y -= delta * 0.02;
+      outerMesh.current.rotation.x -= delta * 0.01;
     }
   });
 
@@ -23,29 +23,29 @@ function Globe() {
     <group>
       {/* Inner Dark Sphere to block background */}
       <mesh>
-        <sphereGeometry args={[2.45, 32, 32]} />
+        <sphereGeometry args={[2.45, 64, 64]} />
         <meshBasicMaterial color="#050505" />
       </mesh>
       
-      {/* Wireframe Globe */}
+      {/* Wireframe Globe - Smoother with more segments */}
       <mesh ref={mesh}>
-        <sphereGeometry args={[2.5, 32, 32]} />
+        <sphereGeometry args={[2.5, 64, 64]} />
         <meshBasicMaterial 
           color="#3b82f6" 
           wireframe={true} 
           transparent={true} 
-          opacity={0.5} 
+          opacity={0.25} 
         />
       </mesh>
       
       {/* Outer Glow / Network effect */}
       <mesh ref={outerMesh}>
-        <sphereGeometry args={[2.7, 16, 16]} />
+        <sphereGeometry args={[2.7, 32, 32]} />
         <meshBasicMaterial 
           color="#8b5cf6" 
           wireframe={true} 
           transparent={true} 
-          opacity={0.15} 
+          opacity={0.08} 
         />
       </mesh>
     </group>

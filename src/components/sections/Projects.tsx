@@ -21,7 +21,7 @@ export default function Projects() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -10 }}
-              className="glass-card rounded-2xl overflow-hidden flex flex-col group"
+              className="glass-card rounded-2xl overflow-hidden flex flex-col group hover:shadow-[0_0_30px_-5px_rgba(59,130,246,0.3)] hover:border-neon-blue/30 transition-all duration-500"
             >
               <div className="h-48 bg-gradient-to-br from-neon-blue/20 to-neon-purple/20 relative overflow-hidden flex items-center justify-center">
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300" />
