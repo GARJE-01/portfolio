@@ -17,7 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} bg-background text-foreground antialiased selection:bg-neon-purple/30`}>
+      <body className={`${inter.className} bg-[#0a0a0a] text-gray-300 antialiased selection:bg-neon-blue/30 relative bg-grid`}>
+        <div className="fixed inset-0 noise-overlay z-0 opacity-20 pointer-events-none" />
         <Navbar />
         <main className="relative z-10 flex flex-col min-h-screen">
           {children}

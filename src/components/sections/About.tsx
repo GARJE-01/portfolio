@@ -25,9 +25,9 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-24 relative z-10">
+    <section id="about" className="py-32 relative z-10">
       <div className="container mx-auto px-6 md:px-12">
-        <SectionHeading title="About Me" subtitle="A brief introduction to who I am and what I do." />
+        <SectionHeading title="About Me" subtitle="Introduction" />
         
         <div className="max-w-4xl mx-auto text-center mb-16 flex flex-col items-center">
           <motion.div

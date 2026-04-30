@@ -9,9 +9,9 @@ import { cn } from "@/lib/utils";
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 relative z-10 bg-black/40">
+    <section id="projects" className="py-32 relative z-10 bg-black/40">
       <div className="container mx-auto px-6 md:px-12">
-        <SectionHeading title="Featured Projects" subtitle="Some of my recent work that I'm proud of." />
+        <SectionHeading title="Featured Projects" subtitle="Portfolio" />
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {portfolioData.projects.map((project, index) => {

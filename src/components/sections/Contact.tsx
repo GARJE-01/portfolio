@@ -9,11 +9,11 @@ import Button from "@/components/ui/Button";
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 relative z-10 bg-black/40">
+    <section id="contact" className="py-32 relative z-10 bg-black/40">
       <div className="container mx-auto px-6 md:px-12">
-        <SectionHeading title="Get In Touch" subtitle="Have a question or want to work together? Drop me a message." />
+        <SectionHeading title="Get In Touch" subtitle="Contact" />
         
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 lg:gap-24">
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}

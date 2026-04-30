@@ -11,34 +11,27 @@ interface SectionHeadingProps {
 
 export default function SectionHeading({ title, subtitle, className }: SectionHeadingProps) {
   return (
-    <div className={cn("flex flex-col items-center mb-16", className)}>
+    <div className={cn("flex flex-col items-center mb-20", className)}>
+      {subtitle && (
+        <motion.span
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-neon-blue text-xs font-bold uppercase tracking-[0.3em] mb-4"
+        >
+          {subtitle}
+        </motion.span>
+      )}
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.5 }}
-        className="text-4xl md:text-5xl font-bold tracking-tight text-gradient mb-4"
+        transition={{ duration: 0.5, delay: 0.1 }}
+        className="text-5xl md:text-6xl font-bold tracking-tight text-gradient text-center"
       >
         {title}
       </motion.h2>
-      {subtitle && (
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-gray-400 max-w-2xl text-center text-lg"
-        >
-          {subtitle}
-        </motion.p>
-      )}
-      <motion.div
-        initial={{ scaleX: 0 }}
-        whileInView={{ scaleX: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        className="h-1 w-24 bg-gradient-to-r from-neon-blue to-neon-purple mt-6 rounded-full"
-      />
     </div>
   );
 }

@@ -21,9 +21,9 @@ export default function Skills() {
   };
 
   return (
-    <section id="skills" className="py-24 relative z-10">
+    <section id="skills" className="py-32 relative z-10">
       <div className="container mx-auto px-6 md:px-12">
-        <SectionHeading title="Skills & Expertise" subtitle="Technologies I work with to build modern applications." />
+        <SectionHeading title="Skills & Expertise" subtitle="Stack" />
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
           {portfolioData.skills.map((category, idx) => (
