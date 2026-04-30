@@ -20,19 +20,13 @@ export default function Skills() {
     show: { opacity: 1, scale: 1 }
   };
 
-  const categories = [
-    { title: "Frontend", skills: portfolioData.skills.frontend, color: "from-neon-blue to-blue-600" },
-    { title: "Backend", skills: portfolioData.skills.backend, color: "from-neon-purple to-purple-600" },
-    { title: "Tools & DevOps", skills: portfolioData.skills.tools, color: "from-blue-500 to-purple-500" }
-  ];
-
   return (
     <section id="skills" className="py-24 relative z-10">
       <div className="container mx-auto px-6 md:px-12">
         <SectionHeading title="Skills & Expertise" subtitle="Technologies I work with to build modern applications." />
         
-        <div className="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
-          {categories.map((category, idx) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
+          {portfolioData.skills.map((category, idx) => (
             <div key={idx} className="flex flex-col items-center">
               <h3 className="text-2xl font-bold mb-8 text-white relative inline-block">
                 {category.title}
@@ -46,7 +40,7 @@ export default function Skills() {
                 viewport={{ once: true, margin: "-50px" }}
                 className="flex flex-wrap justify-center gap-4"
               >
-                {category.skills.map((skill, index) => (
+                {category.items.map((skill, index) => (
                   <motion.div
                     key={index}
                     variants={item}

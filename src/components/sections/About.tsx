@@ -29,7 +29,21 @@ export default function About() {
       <div className="container mx-auto px-6 md:px-12">
         <SectionHeading title="About Me" subtitle="A brief introduction to who I am and what I do." />
         
-        <div className="max-w-4xl mx-auto text-center mb-16">
+        <div className="max-w-4xl mx-auto text-center mb-16 flex flex-col items-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="mb-8 relative"
+          >
+            <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-2 border-neon-blue/50 shadow-[0_0_30px_rgba(59,130,246,0.3)] relative z-10">
+              {/* Using standard img tag for simplicity, though next/image is better if configured */}
+              <img src={portfolioData.about.image} alt={portfolioData.hero.name} className="w-full h-full object-cover" />
+            </div>
+            <div className="absolute inset-0 bg-neon-blue/20 blur-2xl rounded-full -z-10" />
+          </motion.div>
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

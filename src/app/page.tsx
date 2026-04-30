@@ -15,7 +15,7 @@ export default function Home() {
       
       {/* Footer */}
       <footer className="py-8 text-center text-gray-500 text-sm border-t border-white/5 relative z-10 bg-black/60">
-        <p>© {new Date().getFullYear()} John Doe. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Mayur Balasaheb Garje. All rights reserved.</p>
         <p className="mt-2 text-xs opacity-60">Built with Next.js, Tailwind CSS & Framer Motion</p>
       </footer>
     </>

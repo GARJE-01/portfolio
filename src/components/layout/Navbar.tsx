@@ -36,7 +36,7 @@ export default function Navbar() {
       >
         <div className="flex justify-between items-center w-full">
           <a href="#" className="text-xl font-bold tracking-tighter text-white">
-            JD<span className="text-neon-blue">.</span>
+            MBG<span className="text-neon-blue">.</span>
           </a>
 
           {/* Desktop Nav */}
