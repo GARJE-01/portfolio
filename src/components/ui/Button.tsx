@@ -13,9 +13,9 @@ export default function Button({ children, variant = "primary", className, ...pr
   const baseStyles = "relative inline-flex items-center justify-center px-6 py-3 font-medium overflow-hidden rounded-lg transition-all duration-300";
   
   const variants = {
-    primary: "bg-neon-blue text-white hover:shadow-[0_0_20px_rgba(59,130,246,0.6)]",
+    primary: "bg-white text-black hover:bg-gray-200 shadow-[0_0_20px_rgba(255,255,255,0.3)]",
     secondary: "bg-neon-purple text-white hover:shadow-[0_0_20px_rgba(139,92,246,0.6)]",
-    outline: "border-2 border-neon-blue text-neon-blue hover:bg-neon-blue/10 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]"
+    outline: "glass border-white/10 text-white hover:bg-white/5 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] hover:shadow-[0_0_15px_rgba(255,255,255,0.1)]"
   };
 
   return (

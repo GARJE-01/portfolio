@@ -51,9 +51,9 @@ export default function Skills() {
                     key={index}
                     variants={item}
                     whileHover={{ scale: 1.1, y: -5 }}
-                    className="glass px-4 py-2 rounded-lg border border-white/10 hover:border-white/30 hover:bg-white/5 transition-all cursor-default shadow-lg hover:shadow-[0_0_15px_rgba(59,130,246,0.3)]"
+                    className="glass px-5 py-2.5 rounded-xl border border-white/5 hover:border-white/20 hover:bg-white/10 transition-all cursor-default shadow-lg hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]"
                   >
-                    <span className="text-gray-200 font-medium">{skill}</span>
+                    <span className="text-gray-200 font-medium text-sm">{skill}</span>
                   </motion.div>
                 ))}
               </motion.div>

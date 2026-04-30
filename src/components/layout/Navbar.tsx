@@ -25,38 +25,45 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header
-      className={cn(
-        "fixed top-0 w-full z-50 transition-all duration-300 border-b border-transparent",
-        isScrolled ? "glass border-white/10 py-4" : "bg-transparent py-6"
-      )}
-    >
-      <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
-        <a href="#" className="text-xl font-bold tracking-tighter text-glow">
-          JD<span className="text-neon-blue">.</span>
-        </a>
+    <div className="fixed top-0 w-full z-50 flex justify-center pt-6 px-6">
+      <header
+        className={cn(
+          "w-full max-w-4xl transition-all duration-500 rounded-full border",
+          isScrolled 
+            ? "glass border-white/10 py-3 px-6 shadow-2xl" 
+            : "bg-transparent border-transparent py-4 px-2"
+        )}
+      >
+        <div className="flex justify-between items-center w-full">
+          <a href="#" className="text-xl font-bold tracking-tighter text-white">
+            JD<span className="text-neon-blue">.</span>
+          </a>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-sm font-medium text-gray-300 hover:text-white hover:text-glow transition-all"
-            >
-              {link.name}
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex gap-8 items-center">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-sm font-medium text-gray-400 hover:text-white transition-all"
+              >
+                {link.name}
+              </a>
+            ))}
+            <a href="#contact" className="text-sm font-medium bg-white text-black px-4 py-2 rounded-full hover:bg-gray-200 transition-colors">
+              Hire Me
             </a>
-          ))}
-        </nav>
+          </nav>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          className="md:hidden text-gray-300 hover:text-white"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
+          {/* Mobile Menu Toggle */}
+          <button
+            className="md:hidden text-gray-300 hover:text-white"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+      </header>
 
       {/* Mobile Nav */}
       {mobileMenuOpen && (
@@ -64,7 +71,7 @@ export default function Navbar() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          className="md:hidden absolute top-full left-0 w-full glass border-t border-white/10 flex flex-col p-6 gap-6"
+          className="md:hidden absolute top-[80px] left-6 right-6 glass border border-white/10 rounded-2xl flex flex-col p-6 gap-6 shadow-2xl"
         >
           {navLinks.map((link) => (
             <a
@@ -78,6 +85,6 @@ export default function Navbar() {
           ))}
         </motion.div>
       )}
-    </header>
+    </div>
   );
 }

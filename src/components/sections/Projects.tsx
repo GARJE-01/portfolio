@@ -23,10 +23,9 @@ export default function Projects() {
               whileHover={{ y: -10 }}
               className="glass-card rounded-2xl overflow-hidden flex flex-col group hover:shadow-[0_0_30px_-5px_rgba(59,130,246,0.3)] hover:border-neon-blue/30 transition-all duration-500"
             >
-              <div className="h-48 bg-gradient-to-br from-neon-blue/20 to-neon-purple/20 relative overflow-hidden flex items-center justify-center">
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300" />
-                {/* Placeholder for project image, could be an img tag in a real app */}
-                <h3 className="text-2xl font-bold opacity-50 group-hover:opacity-100 transition-opacity duration-300 text-glow">
+              <div className="h-48 bg-gradient-to-br from-[#111] to-[#222] relative overflow-hidden flex items-center justify-center border-b border-white/5">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <h3 className="text-2xl font-bold opacity-30 group-hover:opacity-100 transition-opacity duration-500 text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-neon-purple z-10">
                   {project.title}
                 </h3>
               </div>

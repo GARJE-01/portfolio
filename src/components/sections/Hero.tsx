@@ -37,7 +37,7 @@ export default function Hero() {
   }, [displayText, isDeleting, currentTextIndex]);
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-radial-glow">
       {/* Content */}
       <div className="container mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-16 lg:gap-24 items-center relative z-10">
         <motion.div
@@ -45,22 +45,28 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <p className="text-neon-blue font-medium mb-4 tracking-wider uppercase text-sm">
-            Welcome to my universe
-          </p>
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-gray-300 mb-6 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)]">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-neon-blue opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-neon-blue"></span>
+            </span>
+            Available for new opportunities
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-6 leading-tight">
             Hi, I'm <br />
-            <span className="text-glow">{portfolioData.hero.name}</span>
+            <span className="text-gradient">{portfolioData.hero.name}</span>
           </h1>
           
-          <div className="h-12 mb-8">
-            <p className="text-xl md:text-2xl text-gray-300 font-light">
-              <span className="text-neon-purple font-medium">{displayText}</span>
-              <span className="animate-pulse ml-1">|</span>
+          <div className="h-16 mb-8 max-w-lg">
+            <p className="text-xl md:text-2xl text-gray-400 font-light leading-relaxed">
+              <span className="text-white font-medium">{displayText}</span>
+              <span className="animate-pulse ml-1 text-neon-blue">|</span>
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 mt-8">
             <Button onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}>
               View Projects
             </Button>
