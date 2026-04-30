@@ -4,13 +4,14 @@ export const portfolioData = {
     title: "Full Stack Developer",
     typingText: [
       "Full Stack Developer",
-      "Building Real-World Systems",
-      "Exploring Networking & AI"
+      "Building Real World Projects",
+      "Exploring Systems & Networking"
     ]
   },
   about: {
     text: "I am a developer focused on building real-world applications across web development, cloud systems, and AI. I enjoy solving practical problems and creating systems that reduce manual effort and improve efficiency. Currently, I am expanding my knowledge in networking and system-level concepts while preparing for CCNA.",
-    image: "https://github.com/GARJE-01.png"
+    // REPLACE THIS: Add your profile image (cutout recommended) to /public/profile.png
+    image: "/profile.png"
   },
   projects: [
     {

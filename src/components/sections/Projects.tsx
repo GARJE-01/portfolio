@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { portfolioData } from "@/data/portfolio";
 import { ExternalLink, Star } from "lucide-react";
@@ -8,25 +8,48 @@ import { FaGithub } from "react-icons/fa";
 import { cn } from "@/lib/utils";
 
 export default function Projects() {
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as const }
+    }
+  };
+
   return (
     <section id="projects" className="py-32 relative z-10 bg-black/40">
       <div className="container mx-auto px-6 md:px-12">
         <SectionHeading title="Featured Projects" subtitle="Portfolio" />
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
           {portfolioData.projects.map((project, index) => {
             const isFeatured = index === 0;
             
             return (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                whileHover={{ y: -12, scale: 1.01 }}
+                variants={itemVariants}
+                whileHover={{ y: -12, scale: 1.05 }}
                 className={cn(
-                  "glass-card rounded-2xl overflow-hidden group hover:shadow-[0_20px_50px_-10px_rgba(59,130,246,0.2)] hover:border-neon-blue/30 transition-all duration-700",
+                  "glass-card rounded-2xl overflow-hidden group hover:shadow-[0_20px_50px_-10px_rgba(59,130,246,0.3)] hover:border-neon-blue/40 transition-all duration-700",
                   isFeatured ? "md:col-span-2 lg:col-span-2 flex flex-col md:flex-row" : "flex flex-col"
                 )}
               >
@@ -41,7 +64,7 @@ export default function Projects() {
                   )}
 
                   <h3 className="text-2xl md:text-3xl font-bold opacity-30 group-hover:opacity-100 transition-opacity duration-500 text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-neon-purple z-10 text-center px-4">
-                    {project.title.replace(" ⭐", "")}
+                    {project.title}
                   </h3>
                 </div>
                 
@@ -54,7 +77,7 @@ export default function Projects() {
                   )}
 
                   <h3 className="text-xl md:text-2xl font-bold mb-3 group-hover:text-neon-blue transition-colors duration-300">
-                    {project.title.replace(" ⭐", "")}
+                    {project.title}
                   </h3>
                   <p className="text-gray-400 text-sm mb-6 flex-1 leading-relaxed">
                     {project.description}
@@ -90,7 +113,7 @@ export default function Projects() {
               </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
