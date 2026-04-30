@@ -1,6 +1,6 @@
 export const portfolioData = {
   hero: {
-    name: "Mayur Balasaheb Garje",
+    name: "Mayur Garje",
     title: "Full Stack Developer",
     typingText: [
       "Full Stack Developer",
