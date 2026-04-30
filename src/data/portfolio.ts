@@ -18,49 +18,49 @@ export const portfolioData = {
       title: "FlowTech (Real-World System) ⭐",
       description: "A complete order and inventory management system designed for real-world business use. Reduced manual work, streamlined order processing, and improved inventory tracking.",
       tags: ["React", "Supabase", "Node.js"],
-      github: "https://github.com/GARJE-01",
+      github: "https://github.com/GARJE-01/FlowTech",
       live: "#"
     },
     {
       title: "Hostel Management Website",
       description: "A full-stack web application designed to manage hostel operations efficiently, reducing manual work by 40–45%. Features outing request system, complaint management, and email notifications.",
       tags: ["MongoDB", "Express", "React", "Node.js"],
-      github: "https://github.com/GARJE-01",
+      github: "https://github.com/GARJE-01/Famt_Hostel",
       live: "#"
     },
     {
       title: "Expense Tracker",
       description: "A cloud-integrated personal finance management system for tracking expenses and managing financial data.",
       tags: ["Spring Boot", "Java", "AWS RDS"],
-      github: "https://github.com/GARJE-01",
+      github: "https://github.com/GARJE-01/Expense-Tracker-cloud-computing",
       live: "#"
     },
     {
       title: "Face Recognition Attendance",
       description: "An automated attendance system using face recognition technology with both backend logic and UI integration.",
       tags: ["Python", "OpenCV", "React / CustomTkinter"],
-      github: "https://github.com/GARJE-01",
+      github: "https://github.com/GARJE-01/Face_Recognition_System",
       live: "#"
     },
     {
       title: "AI Article Summarizer",
       description: "A browser extension that summarizes articles using AI for quick reading and better productivity.",
       tags: ["Gemini AI", "JavaScript", "Chrome Extension"],
-      github: "https://github.com/GARJE-01",
+      github: "https://github.com/GARJE-01/AI_Article_Summarizer",
       live: "#"
     },
     {
       title: "RAG Chatbot",
       description: "A Retrieval-Augmented Generation chatbot that answers queries based on uploaded files.",
       tags: ["Streamlit", "LangChain", "HuggingFace", "Groq API"],
-      github: "https://github.com/GARJE-01",
+      github: "https://github.com/GARJE-01/RAG_ChatBot_Groq",
       live: "#"
     },
     {
       title: "Student Management System",
       description: "A system built during a hackathon that visualizes student performance and provides admin insights. Secured 2nd Rank 🥈.",
       tags: ["Web Tech", "Render"],
-      github: "https://github.com/GARJE-01",
+      github: "https://github.com/GARJE-01/studentrecordsystem",
       live: "#"
     },
     {
