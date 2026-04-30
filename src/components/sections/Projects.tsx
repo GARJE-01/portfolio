@@ -3,7 +3,8 @@
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { portfolioData } from "@/data/portfolio";
-import { Github, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 
 export default function Projects() {
   return (
@@ -49,7 +50,7 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
                   >
-                    <Github size={18} /> Code
+                    <FaGithub size={18} /> Code
                   </a>
                   <a
                     href={project.live}

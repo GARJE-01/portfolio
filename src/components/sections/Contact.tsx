@@ -3,7 +3,8 @@
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { portfolioData } from "@/data/portfolio";
-import { Mail, Github, Linkedin, Send } from "lucide-react";
+import { Mail, Send } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Button from "@/components/ui/Button";
 
 export default function Contact() {
@@ -36,14 +37,14 @@ export default function Contact() {
               
               <a href={portfolioData.contact.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-gray-300 hover:text-neon-blue transition-colors group">
                 <div className="w-12 h-12 rounded-full glass flex items-center justify-center group-hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all">
-                  <Github />
+                  <FaGithub size={24} />
                 </div>
                 <span className="text-lg">GitHub Profile</span>
               </a>
               
               <a href={portfolioData.contact.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-gray-300 hover:text-neon-purple transition-colors group">
                 <div className="w-12 h-12 rounded-full glass flex items-center justify-center group-hover:shadow-[0_0_15px_rgba(139,92,246,0.5)] transition-all">
-                  <Linkedin />
+                  <FaLinkedin size={24} />
                 </div>
                 <span className="text-lg">LinkedIn Network</span>
               </a>
