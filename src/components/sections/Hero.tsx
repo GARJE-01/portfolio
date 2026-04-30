@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Button from "@/components/ui/Button";
 import { portfolioData } from "@/data/portfolio";
-import ParticleScene from "@/components/3d/ParticleScene";
+import GlobeScene from "@/components/3d/GlobeScene";
 
 export default function Hero() {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -38,9 +38,6 @@ export default function Hero() {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-      {/* 3D Background */}
-      <ParticleScene />
-      
       {/* Content */}
       <div className="container mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-12 items-center relative z-10">
         <motion.div
@@ -73,8 +70,17 @@ export default function Hero() {
           </div>
         </motion.div>
         
-        {/* Empty div for right side layout, 3D is behind everything */}
-        <div className="hidden md:block"></div>
+        {/* Right side: 3D Globe */}
+        <motion.div 
+          className="hidden md:flex items-center justify-center relative"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.2 }}
+        >
+          {/* Subtle background glow for the globe */}
+          <div className="absolute inset-0 bg-neon-blue/10 blur-[100px] rounded-full" />
+          <GlobeScene />
+        </motion.div>
       </div>
 
       {/* Scroll indicator */}
