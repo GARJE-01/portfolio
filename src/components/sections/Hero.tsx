@@ -122,14 +122,12 @@ export default function Hero() {
               <div className="flex flex-wrap gap-6 justify-center lg:justify-start">
                 <Button 
                   onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-                  className="px-10 shadow-[0_0_30px_rgba(59,130,246,0.2)] hover:shadow-[0_0_40px_rgba(59,130,246,0.4)] transition-all duration-300"
                 >
                   Let's Connect
                 </Button>
                 <Button 
                   variant="outline" 
                   onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
-                  className="px-10 hover:bg-white/5 transition-all duration-300"
                 >
                   Explore Work
                 </Button>
