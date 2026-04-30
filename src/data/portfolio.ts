@@ -63,13 +63,6 @@ export const portfolioData = {
       live: "#"
     },
     {
-      title: "Fantasy Sports Web App",
-      description: "A web-based fantasy sports application developed during internship experience.",
-      tags: ["HTML", "CSS", "JavaScript", "MySQL"],
-      github: "https://github.com/GARJE-01",
-      live: "#"
-    },
-    {
       title: "Rock vs Mine Classification",
       description: "A machine learning model that classifies sonar signals as rock or mine using SVM.",
       tags: ["Python", "Scikit-learn", "Machine Learning"],
