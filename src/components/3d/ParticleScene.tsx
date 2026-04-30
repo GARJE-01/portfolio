@@ -18,10 +18,10 @@ function Particles() {
     return positions;
   }, [count]);
 
-  useFrame((state) => {
+  useFrame((state, delta) => {
     if (mesh.current) {
-      mesh.current.rotation.y = state.clock.elapsedTime * 0.05;
-      mesh.current.rotation.x = state.clock.elapsedTime * 0.02;
+      mesh.current.rotation.y += delta * 0.05;
+      mesh.current.rotation.x += delta * 0.02;
     }
   });
 
